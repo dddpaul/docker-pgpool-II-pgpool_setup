@@ -20,7 +20,7 @@ RUN rpm -ivh pgdg-centos94-9.4-1.noarch.rpm
 RUN yum install -y postgresql${POSTGRESQL_VERSION2}-devel postgresql${POSTGRESQL_VERSION2} postgresql${POSTGRESQL_VERSION2}-server postgresql${POSTGRESQL_VERSION2}-contrib
 
 # Install pgpool-II packages
-RUN yum install -y libmemcached
+RUN yum install -y libmemcached systemd-sysv
 RUN wget http://www.pgpool.net/yum/rpms/3.4/redhat/rhel-7-x86_64/${RPM} -O /tmp/${RPM}
 RUN rpm -ivh /tmp/${RPM}
 RUN wget http://www.pgpool.net/yum/rpms/3.4/redhat/rhel-7-x86_64/${DEV_RPM} -O /tmp/${DEV_RPM}
