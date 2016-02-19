@@ -33,7 +33,7 @@ RUN yum install -y ed vi which openssh-server openssh-clients tar memcached-deve
 RUN yum install -y rsync
 
 # Install necessary packages for pgpoolAdmin
-RUN yum install -y httpd php php-pgsql
+RUN yum install -y httpd php php-pgsql initscripts
 
 # Install pgpoolAdmin
 ENV PGPOOLADMIN pgpoolAdmin-3.4.0-1.pgdg.noarch.rpm
